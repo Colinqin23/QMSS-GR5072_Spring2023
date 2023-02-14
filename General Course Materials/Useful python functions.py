@@ -65,29 +65,101 @@ x.reverse()
 ###### Methods / Functions ###### =========================
 
 # Concatenate strings
-print("Hi " + "name")
+print("Hi " + "Tom!")
 
 # Repeat string 5x times
 print("hi " * 5)
 
 # Capitalize first word only
-x.capitalize()
+'test method'.capitalize()
+
+# Capitalize first letter of each word
+'test method'.title()
 
 # Make every letter upper case
-x.upper()
+'case'.upper()
 
 # Make every letter lower case
-x.lower()
+'CASE'.lower()
 
 # Replace strings
-x.replace("z", "sa") # replace z with sa
+'zebra'.replace("z", "Z") # replace z with sa
+"The red car is between the blue car and the old car".replace("car", "house")
+"The red car is between the blue car and the old car".replace("car", "house", 2)
 
 # Check index of a particular character/string
-x.index("a")
+'aloha'.index("a")
 
 # Coerce numeric type to string to pring
 avg = np.mean(np_baseball[:,0])
 print("Average: " + str(avg))
+
+# Get length of string 
+len("Hi")
+
+# Search string, returning the first index that the string appears
+"Where's Waldo?".find("Waldo")
+"Where's Waldo?".find("Wilma")
+
+# Search string, returning the first index that the string appears
+"Where's Waldo?".index("Waldo")
+"Where's Waldo?".index("Wilma") # Unlike .find, this returns ValueError exception if no match found
+
+# Count occurences
+"Where's Waldo?".count("W")
+"Where's Waldo?".count("W", 3, 100) # you can specify starting and ending indexes to scan
+
+# Return True if there is at least one upper or lower case character
+'Test'.isupper()
+'Test'.islower()
+
+# Return True if string consists only of letters and is not blank
+'Item_5'.isalpha()
+'Item'.isalpha()
+
+# Return True if string consists only of numeric characters and is not blank
+'Item_5'.isalnum()
+'Item5'.isalnum()
+
+# Return True if string consists only consists of letters and isn't blank
+'4'.isdecimal()
+'Item5'.isdecimal()
+
+# Return True if string consists only of spaces, tabs, and newlines and is not blank
+"  \n".isspace()
+
+# Return True if string consists only of words that begin with an uppercase letter followed by only lowercase letters
+"Test Title".istitle()
+
+# Return True if string starts or ends with certain string
+"Item_5".startswith("Item_")
+"_Item5".endswith("_Item5")
+
+# Joins together string to end of other strings 
+', '.join(['cats', 'dogs', 'bats'])
+
+# Split string into list
+'My name is Simon'.split(' ') # ' ' is actually the default
+'My name is Simon Cowell'.split(' ', maxsplit=1)   
+'My name is Simon Cowell'.rsplit(' ', maxsplit=1) # split from right side
+ 
+# Split string into multiple lines depending on line boundry
+"This string will be split\nin two".splitlines()
+"This string will be split\nin two".split('\n')
+
+# Split string into before and after a separator
+'Hello, world!'.partition('w')
+
+# Right/center/left adjust
+'Hello'.rjust(10)
+'Hello'.ljust(10)
+'Hello'.center(10)
+
+# Remove white space or special characters on left/right of string
+'  Hello World!  '.strip()
+'  Hello World!  '.strip("$")
+'  Hello World!  '.rstrip()
+'  Hello World!  '.lstrip()
 
 
 
@@ -203,7 +275,6 @@ with open("file_name.npy", "wb") as f: # wb stands for "write binary"
 # Load numpy array
 with open("file.npy", "rb") as f: # rb stands for "read binary"
     array = np.load(f)
-
 
 # See data type
 array.dtype
@@ -517,6 +588,7 @@ from math import radians
 """ Other Random Notes to remember! """
 
 # # Methods: Functions that belong to objects
+# # Attributes: Properties/variables which belong to objects
 # # Modules: Python scripts which are read in from various Python libraries
 # # 
 # # 
