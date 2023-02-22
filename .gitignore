@@ -6,4 +6,7 @@
 # Python specific files to ignore 
 *.ipynb_checkpoints
 
+# Ignore old folders
+old
+
 
