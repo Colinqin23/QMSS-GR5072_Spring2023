@@ -67,9 +67,6 @@ x.reverse()
 # Concatenate strings
 print("Hi " + "Tom!")
 
-# Repeat string 5x times
-print("hi " * 5)
-
 # Capitalize first word only
 'test method'.capitalize()
 
@@ -82,16 +79,13 @@ print("hi " * 5)
 # Make every letter lower case
 'CASE'.lower()
 
-# Replace strings
+# Replacing substrings
 'zebra'.replace("z", "Z") # replace z with sa
 "The red car is between the blue car and the old car".replace("car", "house")
 "The red car is between the blue car and the old car".replace("car", "house", 2)
 
-# Check index of a particular character/string
-'aloha'.index("a")
-
 # Coerce numeric type to string to pring
-avg = np.mean(np_baseball[:,0])
+avg = np.mean([1,2,3])
 print("Average: " + str(avg))
 
 # Get length of string 
@@ -108,6 +102,9 @@ len("Hi")
 # Count occurences
 "Where's Waldo?".count("W")
 "Where's Waldo?".count("W", 3, 100) # you can specify starting and ending indexes to scan
+
+# Return True if the string ends with the specified suffix, otherwise return False.
+'Hellow World!'.endswith("World!")
 
 # Return True if there is at least one upper or lower case character
 'Test'.isupper()
@@ -157,9 +154,20 @@ len("Hi")
 
 # Remove white space or special characters on left/right of string
 '  Hello World!  '.strip()
-'  Hello World!  '.strip("$")
+'  Hello World!  '.strip('   Hello')
+'  Hello World!  '.strip(' Hello')
+'  Hello World!  '.strip('      World!')
 '  Hello World!  '.rstrip()
 '  Hello World!  '.lstrip()
+
+# Repeat string 5x times
+"hi " * 5
+
+# Append numbers to the end of a string
+[ ("id" + str(x)) for x in range(1,11)]
+
+# Repeat sequence n times
+np.repeat(["test", "seq"], 3)
 
 
 
@@ -563,14 +571,22 @@ df.plot(x="height", y="weight", kind="scatter")
 plt.show()
 
  
-""" Interacting with other Python libraries """ # =============================================================================
+""" Other reference code """ # =============================================================================
 
 # Install package - using pip (you might have to first install pip yo install other libraries)
 pip3 install numpy
 
-# Import radians function of math package
+# Import radians function from math module
 from math import radians
 
+# Check and et working directory
+import os
+path = r'C:\Users\nicka\OneDrive\Desktop\1 Modern Data Structures - GR5072\QMSS-GR5072_Spring2023\Week 7\Class Activity'
+os.chdir(path)
+os.getcwd()
+
+# list files in current directory
+os.listdir()
 
 
 """ Useful shortcuts """ # =============================================================================
