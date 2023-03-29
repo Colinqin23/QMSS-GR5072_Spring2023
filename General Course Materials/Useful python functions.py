@@ -179,6 +179,14 @@ dict1 = {}
 # Append new Key-Value pair to dictionary
 dict1["New Key"] = value
 
+# Look at keys of a dictionary
+dict1.keys()
+
+# Look at values of a dictionary
+dict1.values()
+
+# Look at key-value pairs of a dictionary
+dict1.items()
 
 
 """ Control statements and Functions """ # =============================================================================
