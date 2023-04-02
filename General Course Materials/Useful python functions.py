@@ -292,7 +292,7 @@ with open("file_name.npy", "wb") as f: # wb stands for "write binary"
 with open("file.npy", "rb") as f: # rb stands for "read binary"
     array = np.load(f)
 
-# See data type
+# See data type of array
 array.dtype
 
 # See dimensions of np.array
@@ -422,6 +422,9 @@ df.columns
 # Look at single column
 df["col_name"]
 
+# Change column names 
+df3 = pd.DataFrame(s1, columns=['Value1', 'Value2'])
+
 # Look at multiple columns
 df[["col_name", "col_names"]]
 cols = ["col_name", "col_names"]
@@ -430,6 +433,10 @@ df[cols]
 # More neatly view of col names
 for col in df1.columns:
     print(col)
+
+# Use [[]] to return a pd.DataFrame, otherwise its a pd.Series
+print(type(iris['sepal_length']))
+print(type(iris[['sepal_length']]))
 
 # Look at columns and their data types
 df.info()
